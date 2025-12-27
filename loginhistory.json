@@ -1,0 +1,12 @@
+[
+  {
+    "email": "admin02@gmail.com",
+    "action": "login",
+    "time": "2025-11-21 12:00:01"
+  },
+  {
+    "email": "admin02@gmail.com",
+    "action": "logout",
+    "time": "2025-11-21 13:22:10"
+  }
+]

@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: petungi_backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - FLASK_ENV=production
+    networks:
+      - petungi_net
+
+  frontend:
+    build: ./frontend
+    container_name: petungi_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - petungi_net
+
+networks:
+  petungi_net:
+    driver: bridge
